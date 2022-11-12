@@ -1,0 +1,13 @@
+Fix: Windows Defender Firewall Error Code 0x6d9
+
+
+Press the WIN+R keys together, in the run dialogue box type:
+
+cmd
+
+Next, press the CTRL+SHIFT+ENTER keys together, an elevated cmd prompt will open, copy the below cmd, and right click anywhere in the cmd prompt window, select "paste' the cmd will append to the prompt, press enter.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\mpssvc" /v start /t REG_DWORD /d 0x2 /f
+
+Restart computer,
+by j0nny(ROOT44)
